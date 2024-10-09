@@ -1,0 +1,21 @@
+/* styles.css */
+.numbered-section {
+  border-left: 1px solid #b7b7c2;
+}
+
+.numbered-card {
+  background: linear-gradient(90deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.number {
+  position: absolute;
+  left: -25px;
+  width: 45px;
+  height: 45px;
+  background-color: brown;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

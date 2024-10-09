@@ -1,0 +1,42 @@
+* {
+    font-family: "Jost", Helvetica, Arial, sans-serif;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.logo h6 {
+    font-size: 15px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(72, 69, 69);
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.links a:hover {
+    color: brown;
+}
