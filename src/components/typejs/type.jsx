@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import '../typejs/type.css'
 // my picture section part
 export function Type() {
     // Create Ref element
-    const el = useRef(null);
+    const kuchb = useRef(null);
     useEffect(() => {
-        const typed = new Typed(el.current, {
+        const typed = new Typed(kuchb.current, {
             strings: [" Web Developer.", " Freelancer."],
             // Speed setting
             startDelay: 300,
@@ -22,15 +21,16 @@ export function Type() {
             typed.destroy()
         };
     }, []);
-
     return (
-        <div className='fs-3'>
-            <h6 className='website' data-aos="zoom-out">WELCOME TO MY WEBSITE</h6>
-            <h4 className='fs-1' data-aos="fade-up">Hi, I'm
-                <span className='mushk'> Muskan Khan</span> a<br></br>
-                {/* Element to display typing strings */}
-                <span ref={el} >  </span>
+        <div className="md:mt-24 mt-28 md:mx-24 md:px-14 px-4 flex flex-col items-start text-start text-white">
+            <h1 className="text-4xl font-medium">Hey</h1>
+            <h4 className="text-md mt-2 animate-zoom-out font-light" data-aos="zoom-out">WELCOME TO MY WEBSITE</h4>
+            <h4 className="text-5xl font-light" data-aos="fade-up">
+                I'm
+                <span className="text-primary"> Muskan Khan</span> a<br />
+                <span ref={kuchb}></span>
             </h4>
+            <button class="flex items-start px-5 mb-5 mt-3 bg-yellow-500 hover:bg-yellow-600 transition-colors duration-200  text-white border-0 py-2 focus:outline-none rounded text-md">CONTACT</button>
         </div>
     );
 }

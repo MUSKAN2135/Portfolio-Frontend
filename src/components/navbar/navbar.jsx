@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../../images/mylogo.png'
-import './navbar.css'
 import { FaBars } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -19,7 +18,7 @@ export default function Navbar() {
     }, []);
 
     const navbarStyle = {
-        backgroundColor: scrollPosition > 50 ? 'white' : 'transparent',
+        backgroundColor: scrollPosition > 50 ? 'transparent' : 'transparent',
     };
 
     const scrollToSection = () => {
@@ -27,7 +26,7 @@ export default function Navbar() {
 
         if (section) {
             window.scrollTo({
-                top: section.offsetTop - 50, // Adjust offset if needed
+                top: section.offsetTop - 50, 
                 behavior: 'smooth',
             });
         }
@@ -38,22 +37,21 @@ export default function Navbar() {
     };
     return (
         <div>
-            <div className='top-bar d-flex justify-content-md-around justify-content-between px-md-0 align-items-center' style={navbarStyle}>
-                <div className='logo d-flex flex-column align-items-center p-md-0 px-3' >
-                    <img src={logo} alt='' />
-                    <h6 className='name d-flex flex-column align-items-center'>MUSKAN KHAN
-                        <span>Web Developer</span>
-                    </h6>
+            <div className='w-full flex md:justify-around justify-between md:px-0 px-8 items-center' style={navbarStyle}>
+                <div className='flex flex-col items-center text-white md:p-0 px-3' >
+                    <img src={logo} alt='' className='w-24 h-24' />
+                    <h6 className='flex flex-col items-center text-sm'>MUSKAN KHAN</h6>
+                        <span className='text-xs'>Web Developer</span>
                 </div>
-                <div className='links d-none d-md-flex align-items-center'>
-                    <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-                    <li><a href="#aboutme" onClick={() => scrollToSection('About Me')}>About Me</a></li>
-                    <li><a href="#whatido" onClick={() => scrollToSection('What I Do')}>What I Do</a></li>
-                    <li><a href="#portfolio" onClick={() => scrollToSection('Portfolio')}>Portfolio</a></li>
-                    <li><a href="#myResume" onClick={() => scrollToSection('My Resume')}>My Resume</a></li>
-                    <li><a href="#contactme" onClick={() => scrollToSection('Contact Me')}>Contact Me</a></li>
+                <div className='links hidden md:block items-center text-white'>
+                    <a className='px-3 hover:text-yellow-500' href="#home" onClick={() => scrollToSection('home')}>Home</a>
+                    <a className='px-3 hover:text-yellow-500' href="#aboutme" onClick={() => scrollToSection('About Me')}>About Me</a>
+                    <a className='px-3 hover:text-yellow-500' href="#whatido" onClick={() => scrollToSection('What I Do')}>What I Do</a>
+                    <a className='px-3 hover:text-yellow-500' href="#portfolio" onClick={() => scrollToSection('Portfolio')}>Portfolio</a>
+                    <a className='px-3 hover:text-yellow-500' href="#myResume" onClick={() => scrollToSection('My Resume')}>My Resume</a>
+                    <a className='px-3 hover:text-yellow-500' href="#contactme" onClick={() => scrollToSection('Contact Me')}>Contact Me</a>
                 </div>
-                <div className="bars d-flex d-md-none p-md-0 px-3" style={{ cursor: 'pointer' }} onClick={toggleMenu}>
+                <div className="flex md:hidden block md:p-0 px-3" style={{ cursor: 'pointer' }} onClick={toggleMenu}>
                     {isMenuOpen ?
                         <FaBars className='fs-24' />
                         :
@@ -62,14 +60,14 @@ export default function Navbar() {
                 </div>
             </div>
             {isMenuOpen &&
-                <div className='navbarlnks' style={{ borderRadius: '10px', position: 'relative', top: '90px', height: '450px', width: '100%' }}>
-                    <ul className='burgrlinks pt-4 list-unstyled px-3'>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#aboutme" onClick={() => scrollToSection('About Me')}>About Me</a></li>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#whatido" onClick={() => scrollToSection('What I Do')}>What I Do</a></li>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#portfolio" onClick={() => scrollToSection('Portfolio')}>Portfolio</a></li>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#myResume" onClick={() => scrollToSection('My Resume')}>My Resume</a></li>
-                        <li className='py-3 border-bottom'><a style={{ textDecoration: 'none', color: 'gray' }} href="#contactme" onClick={() => scrollToSection('Contact Me')}>Contact Me</a></li>
+                <div style={{ borderRadius: '10px', position: 'relative', top: '20px', height: '250px', width: '100%' }}>
+                    <ul className='pt-4 px-3 flex flex-col shadow-lg'>
+                        <a className='m-3' href="#home" onClick={() => scrollToSection('home')}>Home</a>
+                        <a className='m-3' href="#aboutme" onClick={() => scrollToSection('About Me')}>About Me</a>
+                        <a className='m-3' href="#whatido" onClick={() => scrollToSection('What I Do')}>What I Do</a>
+                        <a className='m-3' href="#portfolio" onClick={() => scrollToSection('Portfolio')}>Portfolio</a>
+                        <a className='m-3' href="#myResume" onClick={() => scrollToSection('My Resume')}>My Resume</a>
+                        <a className='m-3' href="#contactme" onClick={() => scrollToSection('Contact Me')}>Contact Me</a>
                     </ul>
                 </div>
             }
