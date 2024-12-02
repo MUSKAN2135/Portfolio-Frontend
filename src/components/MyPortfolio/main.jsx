@@ -15,10 +15,8 @@ export default function Main() {
       {/* hero section */}
       <section id='home' className="text-gray-400 body-font main">
         <Navbar />
-        <div className="lg:flex-grow md:w-full lg:pr-14 md:pr-10 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <div className="hero-content text-neutral-content py-5 mb-5">
-            <Type />
-          </div>
+        <div className="w-full h-full pb-24 flex flex-col justify-center items-center md:items-start md:text-left text-center">
+          <Type />
         </div>
       </section>
       <section id="whatido" className="py-8">
@@ -74,24 +72,62 @@ export default function Main() {
         </div>
         <Gallery />
       </section>
-      <section id='myResume' className='container px-5 mt-3 mb-5'>
-        <div className='container about-me d-flex flex-column align-items-center text-center px-5 w-50' data-aos="fade-up">
-          <h2>Resume</h2>
-          <hr className='hr-line'></hr>
+      <section id="myResume" className="mx-auto mt-3 sm:px-14 md:px-8 mb-5">
+        <div
+          className="flex flex-col items-center text-center px-5 w-full md:w-1/2 mx-auto"
+          data-aos="fade-up">
+          <h2 className="text-2xl font-light">Resume</h2>
+          <hr className="w-24 my-3 border-yellow-500 mx-auto" />
         </div>
-        <div className="px-5 py-3" data-aos="fade-up">
-          <div className='row'>
-            <div className='col-lg-6 col-md-7'>
-              <h2 className='py-3'>Experience</h2>
-              <Resume first='1' second='03/2024 - Present' third='Full Stack Developer' fourth='Heapware' fifth='I actively contribute to the development and enhancement of web applications. My responsibilities involve coding and implementing innovative features. This internship has provided me with valuable hands-on experience.' />
-              <Resume first='2' second='06/2023 - 02/2024' third='MERN stack developer' fourth='IDEO College of Technology' fifth='During my tenure as a MERN Stack Developer intern at Ideo College, I honed my skills in designing scalable web applications. I actively contributed to the development of cutting-edge projects, gaining experience in MERN technologies.' />
-              <Resume first='3' second='10/2020 - 01/2021' third='Freelancing' fourth='DigiSkills' fifth='I acquired freelancing skills through Digiskills, marking a pivotal step in my professional journey. The natural progression of my abilities and the self-sufficiency have empowered me to thrive as a freelancer. ' />
+        <div className="p-10" data-aos="fade-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 space-x-l-8">
+            <div>
+              <h2 className="p-6 text-2xl font-normal">Experience</h2>
+              <Resume
+                first="1"
+                second="03/2024  Present"
+                third="Full Stack Developer"
+                fourth="Heapware"
+                fifth="I actively contribute to the development and enhancement of web applications. My responsibilities involve implementing innovative features."
+              />
+              <Resume
+                first="2"
+                second="06/2023  02/2024"
+                third="MERN stack developer"
+                fourth="IDEO College of Technology"
+                fifth="During my tenure as a MERN Stack Developer intern at Ideo College, I honed my skills in designing scalable web applications."
+              />
+              <Resume
+                first="3"
+                second="10/2020  01/2021"
+                third="Freelancing"
+                fourth="DigiSkills"
+                fifth="I acquired freelancing skills through Digiskills, marking a pivotal step in my professional journey. The natural progression of my abilities."
+              />
             </div>
-            <div className='col-lg-6 col-md-7'>
-              <h2 className='py-3'>Education</h2>
-              <Resume first='1' second='08/2018 - 06/2022' third='BS Information Technology' fourth='Lahore Leads University' fifth='I completed my BSIT degree from Lahore Leads University, where I gained a solid understanding of Information Technology. This experience fueled my interest in creative problem-solving, laying the groundwork for my professional journey.' />
-              <Resume first='2' second='08/2016 - 09/2018' third='ICS' fourth='Punjab Group of Colleges' fifth='I pursued my Intermediate studies with a focus on ICS, delving into the dynamic world of computer science. This academic journey equipped me with a solid foundation and interactive learning experiences, fostering a passion for technology.' />
-              <Resume first='3' second='2016' third='Matric' fourth='Science' fifth='I hold a Matriculation degree with a focus on Science, reflecting my enthusiasm for exploring the interactive and dynamic world of scientific principles. ' />
+            <div>
+              <h2 className="p-6 text-2xl font-normal">Education</h2>
+              <Resume
+                first="1"
+                second="08/2018  06/2022"
+                third="BS Information Technology"
+                fourth="Lahore Leads University"
+                fifth="I completed my BSIT degree from Lahore Leads University, where I gained a solid understanding of Information Technology. This experience fueled my interest in creative problem-solving."
+              />
+              <Resume
+                first="2"
+                second="08/2016  09/2018"
+                third="ICS"
+                fourth="Punjab Group of Colleges"
+                fifth="I pursued my Intermediate studies with a focus on ICS, delving into the dynamic world of computer science. This academic journey equipped me with a solid foundation."
+              />
+              <Resume
+                first="3"
+                second="08/2016"
+                third="Matric"
+                fourth="Science"
+                fifth="I hold a Matriculation degree with a focus on Science, reflecting my enthusiasm for exploring the interactive and dynamic world of scientific principles."
+              />
             </div>
           </div>
         </div>

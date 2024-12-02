@@ -22,9 +22,9 @@ export function Type() {
         };
     }, []);
     return (
-        <div className="md:mt-24 mt-28 md:mx-24 md:px-14 px-4 flex flex-col items-start text-start text-white">
+        <div className="md:mx-24 md:px-14 px-4 text-start text-white">
             <h1 className="text-4xl font-medium">Hey</h1>
-            <h4 className="text-md mt-2 animate-zoom-out font-light" data-aos="zoom-out">WELCOME TO MY WEBSITE</h4>
+            <h4 className="text-md mt-2 animate-zoom-out font-light">WELCOME TO MY WEBSITE</h4>
             <h4 className="text-5xl font-light" data-aos="fade-up">
                 I'm
                 <span className="text-primary"> Muskan Khan</span> a<br />

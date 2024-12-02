@@ -32,10 +32,10 @@ export function Footer() {
         }
     };
     return (
-        <section className="relative ">
+        <section className="relative">
             <div className="relative py-4 bg-yellow-500">
                 <div className="contactbg absolute right-0 left-0 z-[1] inset-0"></div>
-                <footer className="relative z-10 text-gray-800 text-center py-10">
+                <footer className="relative z-[3] text-gray-800 text-center py-10">
                     <div className="w-full text-center pt-3 px-5">
                         <h4 className="pt-3 text-3xl font-mono">Contact Me</h4>
                         <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg flex flex-col justify-center items-center w-full max-w-lg mx-auto">

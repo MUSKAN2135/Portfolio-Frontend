@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../../images/mylogo.png'
+import logo from '../images/mylogo.png'
 import { FaBars } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -23,7 +23,6 @@ export default function Navbar() {
 
     const scrollToSection = () => {
         const section = document.getElementById('');
-
         if (section) {
             window.scrollTo({
                 top: section.offsetTop - 50, 
@@ -37,7 +36,7 @@ export default function Navbar() {
     };
     return (
         <div>
-            <div className='w-full flex md:justify-around justify-between md:px-0 px-8 items-center' style={navbarStyle}>
+            <div className='w-full flex md:justify-around justify-between md:px-0 px-8 items-center' style={navbarStyle}data-aos="fade-down">
                 <div className='flex flex-col items-center text-white md:p-0 px-3' >
                     <img src={logo} alt='' className='w-24 h-24' />
                     <h6 className='flex flex-col items-center text-sm'>MUSKAN KHAN</h6>

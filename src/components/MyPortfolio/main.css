@@ -1,13 +1,15 @@
-* p{
-color: rgb(124, 123, 123);
+* p {
+    color: rgb(124, 123, 123);
 }
+
 .main {
-    background: linear-gradient(to right, rgba(65, 64, 64, 0.8), rgba(106, 104, 104, 0.022)), url(../images/photo-1484417894907-623942c8ee29.avif);
+    background: linear-gradient(to left, rgba(34, 34, 34, 0.8), rgba(144, 141, 141, 0.022)), url(../images/Blue\ Tosca\ Modern\ Bold\ Training\ &\ Development\ Presentation.jpg);
     background-size: cover;
     width: auto;
     height: 100vh;
+    background-position: center;
 }
-.square{
+.square {
     clip-path: polygon(100% 11%, 100% 90%, 77% 100%, 0 89%, 0 8%, 56% 0);
 
 }
